@@ -31,9 +31,9 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|reference|null: false, foreign_key: true|
-|group_id|reference|null: false, foreign_key: true|
+|users_id|reference|null: false, foreign_key: true|
+|groups_id|reference|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :group
-- belongs_to :user
+- belongs_to :groups
+- belongs_to :users
