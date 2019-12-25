@@ -3,7 +3,7 @@
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
-|username|string|null: false|
+|name|string|null: false|
 ### Association
 - has_many :posts
 - has_many :comments
@@ -13,14 +13,14 @@
 |------|----|-------|
 |title|text|null: false|
 |text|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- has_many :comments
+
 
 ## messageテーブル
 |Column|Type|Options|
 |------|----|-------|
+|image|text||
 |text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
