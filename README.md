@@ -5,7 +5,6 @@
 |password|string|null: false|
 |name|string|null: false|
 ### Association
-- has_many :posts
 - has_many :comments
 
 ## groupテーブル
@@ -25,7 +24,6 @@
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :post
 - belongs_to :user
 
 
