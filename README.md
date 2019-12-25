@@ -12,3 +12,5 @@
 ### Association
 - belongs_to :group
 - belongs_to :user
+- belongs_to :body
+- belongs_to :image
