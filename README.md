@@ -10,9 +10,9 @@
   has_many :groups, through: :groups_users
 
 ## groupsテーブル
-|name|Type|Options|
+|column|Type|Options|
 |------|----|-------|
-|string|text|null: false|
+|name|text|null: false|
 ### Association
 - has_many :groups_users
 -  has_many :users,through::groups_users
@@ -23,7 +23,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |image|text||
-|text|text|null: false|
+|text|text||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
