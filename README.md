@@ -10,7 +10,7 @@
   has_many :groups, through: :groups_users
 
 ## groupsテーブル
-|Column|Type|Options|
+|name|Type|Options|
 |------|----|-------|
 |string|text|null: false|
 ### Association
@@ -22,7 +22,7 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image|text|null: false|
+|image|text||
 |text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
