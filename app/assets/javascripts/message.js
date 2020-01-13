@@ -79,7 +79,7 @@ $('#new_message').on('submit', function(e){
       $('.messages').append(insertHTML);
       })
       .fail(function() {
-        console.log('error');
+        alert('error');
       });
     }
   };
