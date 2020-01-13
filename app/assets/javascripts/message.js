@@ -8,7 +8,7 @@ $(function(){
              ${message.user_name}
            </div>
            <div class="upper-message__date">
-             ${message.date}
+             ${message.created_at}
            </div>
          </div>
          <div class="lower-message">
@@ -27,7 +27,7 @@ $(function(){
              ${message.user_name}
            </div>
            <div class="upper-message__date">
-             ${message.date}
+             ${message.created_at}
            </div>
          </div>
          <div class="lower-message">
@@ -39,7 +39,7 @@ $(function(){
      return html;
    };
  }
-$('.js-form').on('submit', function(e){
+$('#new_message').on('submit', function(e){
  e.preventDefault();
  var formData = new FormData(this);
  var url = $(this).attr('action')
@@ -53,17 +53,13 @@ $('.js-form').on('submit', function(e){
  })
   .done(function(data){
     var html = buildHTML(data);
-    $('.messages').append(html);
-    $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');   
+    $('.messages').append(html);      
     $('form')[0].reset();
+    $('.box').animate({'height' : '200px'});
+    $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
   })
-   .fail(function(){
-     alert('error');
-   });
-   return false;
- });
- $('#new_message').on('submit', function(e){
-  console.log('hoge');
-  e.preventDefault()
+  .fail(function() {
+    alert("メッセージ送信に失敗しました");
+    });
   });
 });
