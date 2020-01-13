@@ -62,4 +62,8 @@ $('.js-form').on('submit', function(e){
    });
    return false;
  });
+ $('#new_message').on('submit', function(e){
+  console.log('hoge');
+  e.preventDefault()
+  });
 });
